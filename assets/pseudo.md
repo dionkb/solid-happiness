@@ -1,4 +1,6 @@
 1. Make a header which uses dayjs to display the current day (and time if ya want) at top of calendar.
+    Added date and time to header.
+    ISSUE: Need to make it auto update each minute.
 2. Break main content into wide rows to block out time of day (They want standard business hours...8-5?).
     Grid? Rows/Cols? List?
 3. Use logic vs the current time to check if the timeblock is past, present, or future. Color code accordingly.

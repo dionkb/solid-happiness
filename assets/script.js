@@ -1,3 +1,10 @@
+// Declare variables for use
+let today = dayjs();
+
+// Header displays date and time
+$('#currentDay').text(today.format('MMM DD, YYYY'));
+$('#currentTime').text(today.format('h:mm a'));
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
