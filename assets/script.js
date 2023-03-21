@@ -1,9 +1,22 @@
 // Declare variables for use
 let today = dayjs();
+let nineAM = today.hour(9);
+let tenAM = today.hour(10);
+let elevenAM = today.hour(11);
+let twelvePM = today.hour(12);
+let onePM = today.hour(13);
+let twoPM = today.hour(14);
+let threePM = today.hour(15);
+let fourPM = today.hour(16);
+let fivePM = today.hour(17);
 
 // Header displays date and time
 $('#currentDay').text(today.format('MMM DD, YYYY'));
 $('#currentTime').text(today.format('h:mm a'));
+
+// Checking if the timeblock is the past, present, or future.
+let timeCheck = today.isAfter(nineAM);
+console.log(timeCheck);
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
