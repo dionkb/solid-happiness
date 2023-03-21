@@ -3,6 +3,10 @@ body {
   font-size: 16px;
 }
 
+header p {
+  margin: 5px;
+}
+
 textarea {
   background: transparent;
   border: none;
