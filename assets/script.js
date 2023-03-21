@@ -1,22 +1,54 @@
 // Declare variables for use
 let today = dayjs();
-let nineAM = today.hour(9);
-let tenAM = today.hour(10);
-let elevenAM = today.hour(11);
-let twelvePM = today.hour(12);
-let onePM = today.hour(13);
-let twoPM = today.hour(14);
-let threePM = today.hour(15);
-let fourPM = today.hour(16);
-let fivePM = today.hour(17);
+let nineAM = today.hour(9).minute(0).second(0);
+let tenAM = today.hour(10).minute(0).second(0);
+let elevenAM = today.hour(11).minute(0).second(0);
+let twelvePM = today.hour(12).minute(0).second(0);
+let onePM = today.hour(13).minute(0).second(0);
+let twoPM = today.hour(14).minute(0).second(0);
+let threePM = today.hour(15).minute(0).second(0);
+let fourPM = today.hour(16).minute(0).second(0);
+let fivePM = today.hour(17).minute(0).second(0);
+let timeBlocks = [
+  nineAM,
+  tenAM,
+  elevenAM,
+  twelvePM,
+  onePM,
+  twoPM,
+  threePM,
+  fourPM,
+  fivePM,
+]
+
+console.log(timeBlocks);
 
 // Header displays date and time
 $('#currentDay').text(today.format('MMM DD, YYYY'));
 $('#currentTime').text(today.format('h:mm a'));
 
 // Checking if the timeblock is the past, present, or future.
-let timeCheck = today.isAfter(nineAM);
-console.log(timeCheck);
+function checkPPF() {
+  for (let i = 0; i < timeBlocks.length; i++) {
+    isFuture = today.isBefore(timeBlocks[i]);
+    console.log(isFuture);
+    isPast = today.isAfter(timeBlocks[i]);
+    console.log(isPast);
+    // Checks if time is already past
+    if (isPast === true && isFuture === false) {
+      console.log("THE PAST");
+    }
+    // Checks if time is in the future
+    else if (isPast === false && isFuture === true) {
+      console.log("THE FUTURE");
+    }
+    // Checks if current time is within this hour block
+    else {
+      console.log("CURRENT HOUR");
+    }
+  }
+}
+checkPPF();
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements

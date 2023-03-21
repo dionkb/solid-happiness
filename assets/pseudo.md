@@ -1,10 +1,18 @@
 ~~1. Make a header which uses dayjs to display the current day (and time if ya want) at top of calendar.~~  
 
+```
     ISSUE: Need to make it auto update each minute.
+```
 
 ~~2. Complete the timeblocks for the remaining standard business hours.~~
 
-3. Use logic vs the current time to check if the timeblock is past, present, or future. Color code accordingly.
+3. Use logic vs the current time to check if the timeblock is past, present, or future.
+
+```
+    ISSUE: Need to find a way to check if within current hour.
+```
+
+Color code accordingly.
 
 4. Time blocks must be able to have events entered into them
     Maybe use an input area?
