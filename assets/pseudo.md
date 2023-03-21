@@ -6,13 +6,10 @@
 
 ~~2. Complete the timeblocks for the remaining standard business hours.~~
 
-3. Use logic vs the current time to check if the timeblock is past, present, or future.
+~~3. Use logic vs the current time to check if the timeblock is past, present, or future.
+ISSUE: Need to find a way to check if within current hour.~~
 
-```
-    ISSUE: Need to find a way to check if within current hour.
-```
-
-Color code accordingly.
+~~Color code accordingly.~~
 
 4. Time blocks must be able to have events entered into them
     Maybe use an input area?

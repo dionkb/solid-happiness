@@ -11,6 +11,17 @@ let twoPM = today.hour(14).minute(0).second(0);
 let threePM = today.hour(15).minute(0).second(0);
 let fourPM = today.hour(16).minute(0).second(0);
 let fivePM = today.hour(17).minute(0).second(0);
+
+// DELETE WHEN DONE TESTING!!! 
+let sixPM = today.hour(18).minute(0).second(0);
+let sevenPM = today.hour(19).minute(0).second(0);
+let eightPM = today.hour(20).minute(0).second(0);
+let ninePM = today.hour(21).minute(0).second(0);
+let tenPM = today.hour(22).minute(0).second(0);
+let elevenPM = today.hour(23).minute(0).second(0);
+let twleveAM = today.hour(24).minute(0).second(0);
+// DELETE WHEN DONE TESTING!!! 
+
 let hoursList = [
   nineAM,
   tenAM,
@@ -21,6 +32,16 @@ let hoursList = [
   threePM,
   fourPM,
   fivePM,
+
+  // DELETE WHEN DONE TESTING!!! 
+  sixPM,
+  sevenPM,
+  eightPM,
+  ninePM,
+  tenPM,
+  elevenPM,
+  twleveAM,
+  // DELETE WHEN DONE TESTING!!! 
 ]
 
 // Variables used to select id's
@@ -33,6 +54,17 @@ let hour14 = document.getElementById("hour-14");
 let hour15 = document.getElementById("hour-15");
 let hour16 = document.getElementById("hour-16");
 let hour17 = document.getElementById("hour-17");
+
+// DELETE WHEN DONE TESTING!!! 
+let hour18 = document.getElementById("hour-18");
+let hour19 = document.getElementById("hour-19");
+let hour20 = document.getElementById("hour-20");
+let hour21 = document.getElementById("hour-21");
+let hour22 = document.getElementById("hour-22");
+let hour23 = document.getElementById("hour-23");
+let hour24 = document.getElementById("hour-24");
+// DELETE WHEN DONE TESTING!!! 
+
 let timeBlocks = [
   hour9, 
   hour10, 
@@ -43,6 +75,16 @@ let timeBlocks = [
   hour15, 
   hour16, 
   hour17,
+
+  // DELETE WHEN DONE TESTING!!!
+  hour18, 
+  hour19,
+  hour20, 
+  hour21,
+  hour22, 
+  hour23,
+  hour24,
+  // DELETE WHEN DONE TESTING!!!
 ]
 
 
@@ -55,8 +97,9 @@ $('#currentTime').text(today.format('h:mm a'));
 // Checking if the timeblock is the past, present, or future.
 function checkPPF() {
   for (let i = 0; i < hoursList.length; i++) {
-    isFuture = today.isBefore(hoursList[i]);
-    isPast = today.isAfter(hoursList[i]);
+    isPast = today.isAfter(hoursList[i], 'hour');
+    isPresent = today.isSame(hoursList[i], 'hour');
+    isFuture = today.isBefore(hoursList[i], 'hour');
     // Checks if time is already past
     if (isPast === true && isFuture === false) {
       console.log((i+9) + " IS IN THE PAST");
@@ -72,11 +115,14 @@ function checkPPF() {
       $(timeBlocks[i]).addClass("future");
     }
     // Checks if current time is within this hour block
-    else {
-      console.log((i+9) + " IS NOW");
+    else if (isPast === false && isFuture === false) {
+      console.log((i+9) + " IS HAPPENING");
       $(timeBlocks[i]).addClass("present");
       $(timeBlocks[i]).removeClass("past");
       $(timeBlocks[i]).removeClass("future");
+    }
+    else {
+      return;
     }
   }
 }
