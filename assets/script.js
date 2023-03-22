@@ -137,10 +137,13 @@ function checkPPF() {
 checkPPF();
 
 function saveItem() {
-  console.log("Saved?")
-  let taskItem9 = document.getElementById('textArea9');
-  let task9 = taskItem9.value;
-  localStorage.setItem("taskDesc9", task9);
+  let taskItemsEl = document.querySelectorAll('#textArea');
+  for (let i = 0; i < taskItemsEl.length; i++) {
+    let taskNumber = [];
+    taskNumber[i] = taskItemsEl[i].value;
+    localStorage.setItem("task" + (i + 9) +"o'clock", taskNumber[i]);
+    console.log(taskNumber[i]);
+  }
 }
 
 // Eventlisteners to respond to user input
@@ -152,7 +155,7 @@ for (let i = 0; i < saveButtonEl.length; i++) {
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-  run();
+  // run();
 });
 
   // TODO: Add a listener for click events on the save button. This code should

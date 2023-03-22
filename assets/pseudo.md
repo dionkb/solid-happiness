@@ -6,15 +6,17 @@
 
 ~~2. Complete the timeblocks for the remaining standard business hours.~~
 
-~~3. Use logic vs the current time to check if the timeblock is past, present, or future.
-ISSUE: Need to find a way to check if within current hour.~~
+~~3. Use logic vs the current time to check if the timeblock is past, present, or future. Color code accordingly.~~
 
-~~Color code accordingly.~~
+~~ISSUE: Need to find a way to check if within current hour.~~
 
-4. Time blocks must be able to have events entered into them
-    Maybe use an input area?
+~~4.Time blocks must be able to have events entered into them~~
 
-5. Events must be saved to local storage. Can be recalled when refreshed. Think 'setItem'
+```
+    ISSUE: Clicking ANY save button will save all areas
+```
+
+~~5. Events must be saved to local storage. Can be recalled when refreshed. Think 'setItem'~~
 
 6. Call em back, think 'getItem'
 
