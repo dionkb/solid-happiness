@@ -88,12 +88,20 @@ let timeBlocks = [
 ]
 
 // Variables used for the save button functionality.
-let saveButtonEl = document.querySelectorAll(".saveBtn");
+let saveButtonEl = document.querySelectorAll('.saveBtn');
+
+
+// ------------------------- END OF VARIABLES ---------------------------//
+
+// ------------------------- BEGINNING OF CODE --------------------------//
+
 
 // Header displays date and time
 $('#currentDay').text(today.format('MMM DD, YYYY'));
 $('#currentTime').text(today.format('h:mm a'));
 
+
+$(function () {
 // Checking if the timeblock is the past, present, or future.
 function checkPPF() {
   for (let i = 0; i < hoursList.length; i++) {
@@ -129,7 +137,10 @@ function checkPPF() {
 checkPPF();
 
 function saveItem() {
-  console.log("Hello");
+  console.log("Saved?")
+  let taskItem9 = document.getElementById('textArea9');
+  let task9 = taskItem9.value;
+  localStorage.setItem("taskDesc9", task9);
 }
 
 // Eventlisteners to respond to user input
@@ -137,10 +148,13 @@ for (let i = 0; i < saveButtonEl.length; i++) {
   saveButtonEl[i].addEventListener('click', saveItem);
 }
 
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
+  run();
+});
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -159,4 +173,3 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
