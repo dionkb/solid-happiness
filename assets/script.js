@@ -87,8 +87,8 @@ let timeBlocks = [
   // DELETE WHEN DONE TESTING!!!
 ]
 
-
-console.log(hoursList);
+// Variables used for the save button functionality.
+let saveButtonEl = document.querySelectorAll(".saveBtn");
 
 // Header displays date and time
 $('#currentDay').text(today.format('MMM DD, YYYY'));
@@ -128,6 +128,14 @@ function checkPPF() {
 }
 checkPPF();
 
+function saveItem() {
+  console.log("Hello");
+}
+
+// Eventlisteners to respond to user input
+for (let i = 0; i < saveButtonEl.length; i++) {
+  saveButtonEl[i].addEventListener('click', saveItem);
+}
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
