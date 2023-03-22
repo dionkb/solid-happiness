@@ -18,7 +18,11 @@
 
 ~~5. Events must be saved to local storage. Can be recalled when refreshed. Think 'setItem'~~
 
-6. Call em back, think 'getItem'
+~~6. Call em back, think 'getItem'~~
+
+```
+    POSSIBLE ISSUE: Deep dive into event prevent default. Do I need it here anywhere?
+```
 
 7. Make it pretty.
 
