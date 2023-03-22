@@ -136,6 +136,7 @@ function checkPPF() {
 }
 checkPPF();
 
+// Saves any text input once the save button is clicked.
 function saveItem() {
   let taskItemsEl = document.querySelectorAll('#textArea');
   for (let i = 0; i < taskItemsEl.length; i++) {
@@ -145,6 +146,17 @@ function saveItem() {
     console.log(taskNumber[i]);
   }
 }
+
+// Loads text input from local storage when user returns to page or refreshes
+function loadItem() {
+  let taskItemsEl = document.querySelectorAll('#textArea');
+  for (let i = 0; i < taskItemsEl.length; i++) {
+    let taskLoad = (localStorage.getItem("task" + (i + 9) + "o'clock"));
+    taskItemsEl[i].innerHTML = taskLoad;
+    console.log(taskLoad);
+  }
+}
+loadItem();
 
 // Eventlisteners to respond to user input
 for (let i = 0; i < saveButtonEl.length; i++) {
