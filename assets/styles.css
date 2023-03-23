@@ -1,10 +1,14 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Grenze', serif;
+  /* font-family: 'Press Start 2P', cursive; */
   font-size: 16px;
+  padding-bottom: 20px;
 }
 
-header p {
-  margin: 5px;
+#currentDay, #currentTime {
+  font-size: 32px;
+  margin: -10px;
 }
 
 textarea {
@@ -32,6 +36,10 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+}
+
+#hour-17 .hour {
+  border-bottom: 1px dashed #000000;
 }
 
 .past {
