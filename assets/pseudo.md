@@ -12,9 +12,7 @@
 
 ~~4.Time blocks must be able to have events entered into them~~
 
-```
-    ISSUE: Clicking ANY save button will save all areas
-```
+~~ISSUE: Clicking ANY save button will save all areas~~
 
 ~~5. Events must be saved to local storage. Can be recalled when refreshed. Think 'setItem'~~
 
