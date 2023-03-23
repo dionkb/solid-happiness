@@ -7,10 +7,10 @@ This project involved refactoring code in order to complete a daily planner/sche
 This webpage will allows a user to enter tasks that they need to complete or remember during their workday. The daily planner will save their input, and load their input as needed. It will also color code the timeblocks based on the current time of day.
 
 Screenshot of final output:   
----------------------------
+![Screenshot of deployed app](https://user-images.githubusercontent.com/64495259/227099072-dcf38f02-cce0-4beb-9f50-b3a6b7ffea5f.jpg)
 
 Link to the GitHub repository:  
--------------------------
+https://github.com/dionkb/solid-happiness.git
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ Link to the GitHub repository:
 ### Executing program
 
 Link to the deployed application:    
-----------------------------
+https://dionkb.github.io/solid-happiness/
 
 ## Authors
 
