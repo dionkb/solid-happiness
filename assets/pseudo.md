@@ -1,9 +1,5 @@
 ~~1. Make a header which uses dayjs to display the current day (and time if ya want) at top of calendar.~~  
 
-```
-    ISSUE: Need to make it auto update each minute.
-```
-
 ~~2. Complete the timeblocks for the remaining standard business hours.~~
 
 ~~3. Use logic vs the current time to check if the timeblock is past, present, or future. Color code accordingly.~~
@@ -18,11 +14,7 @@
 
 ~~6. Call em back, think 'getItem'~~
 
-```
-    POSSIBLE ISSUE: Deep dive into event prevent default. Do I need it here anywhere?
-```
-
-7. Make it pretty.
+~~7. Make it pretty.~~
 
 
 --------------------------- END OF PSEUDOCODE ------------------------------
